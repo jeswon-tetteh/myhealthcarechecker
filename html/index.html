@@ -1,0 +1,129 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-container">
+        <img
+          src="../images/WhatsApp Image 2025-02-20 at 12.07.55 PM (2).jpeg"
+          alt="Healthcare Logo"
+          class="logo-img"
+        />
+        <h1>Healthcare Checker</h1>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-container">
+      <section class="checker-section">
+        <h2 class="section-title">Online Symptom Assessment</h2>
+        <p class="subtitle">
+          Please provide your symptoms for a preliminary assessment
+        </p>
+
+        <form id="healthCheckerForm" class="checker-form">
+          <div class="form-group">
+            <label for="symptoms">Primary Symptoms <span class="required">*</span></label>
+            <textarea
+              id="symptoms"
+              name="symptoms"
+              required
+              placeholder="Describe your symptoms..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="duration">Duration <span class="required">*</span></label>
+            <input
+              type="text"
+              id="duration"
+              name="duration"
+              required
+              placeholder="e.g., 3 days"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="frequency">Frequency <span class="required">*</span></label>
+            <select id="frequency" name="frequency" required>
+              <option value="">Select frequency</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="worsens">Aggravating Factors</label>
+            <textarea
+              id="worsens"
+              name="worsens"
+              placeholder="What makes it worse?"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="additional">Additional Symptoms</label>
+            <textarea
+              id="additional"
+              name="additional"
+              placeholder="Any other symptoms?"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="conditions">Medical History</label>
+            <textarea
+              id="conditions"
+              name="conditions"
+              placeholder="Pre-existing conditions..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-icon">✓</span> Submit Assessment
+          </button>
+        </form>
+
+        <div id="result-container" class="result-container hidden">
+          <h3>Assessment Results</h3>
+          <div id="result-message"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Healthcare Checker. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTop" class="scroll-top-btn" title="Back to Top">↑</button>
+
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>

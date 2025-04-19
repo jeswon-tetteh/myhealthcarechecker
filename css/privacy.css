@@ -1,0 +1,289 @@
+/* css/styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  position: relative;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 167, 69, 0.1),
+    rgba(255, 255, 255, 0.9)
+  );
+  z-index: -1;
+}
+
+/* Header Styles */
+.header {
+  background: #28a745;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 45px;
+  height: auto;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #d1f5d3;
+}
+
+/* Main Content */
+.main-container {
+  max-width: 800px;
+  margin: 100px auto 80px;
+  padding: 0 20px;
+}
+
+.checker-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  color: #28a745;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.required {
+  color: #dc3545;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #218838;
+}
+
+.result-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #28a745;
+}
+
+/* Scroll to Top */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.scroll-top-btn:hover {
+  background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checker-section {
+    padding: 1rem;
+  }
+}
+
+/* Privacy Page Specific Styles */
+.privacy-page {
+  max-width: 1000px;
+  margin: 100px auto 80px;
+}
+
+.privacy-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.privacy-content {
+  margin-top: 2rem;
+}
+
+.last-updated {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.privacy-content h3 {
+  color: #28a745;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.privacy-content p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.privacy-content ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.privacy-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.privacy-content .contact-details {
+  list-style: none;
+  margin-left: 0;
+}
+
+.privacy-content .contact-details li {
+  margin-bottom: 0.75rem;
+}
+
+.privacy-content .contact-details a {
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.privacy-content .contact-details a:hover {
+  color: #218838;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .privacy-section {
+    padding: 1.5rem;
+  }
+}
